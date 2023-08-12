@@ -163,6 +163,10 @@ a:visited {
   filter: brightness(130%);
 }
 
+.search-form__search-bar__button__text--mob {
+  display: none;
+}
+
 .filters {
   display: flex;
   flex-direction: row;
@@ -227,11 +231,17 @@ a:visited {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
+  min-height: 30px;
+  min-width: 30px;
   border: 2px solid #f2f2f2;
   border-radius: 100%;
   margin-right: 10px;
+}
+
+.accommodations__number-result_icon-container i {
+  font-size: initial;
 }
 
 .accommodations__number-result_icon {
@@ -241,6 +251,7 @@ a:visited {
 
 .accommodations__number-result__text {
   max-width: 400px;
+  padding: 7px 0px;
 }
 
 .accommodations__two-cards {
@@ -407,8 +418,7 @@ a:visited {
   margin: 10px 0px;
 }
 
-/* Mobile & Tablet version */
-/* Mobile size 768 */
+/* Tablet version */
 @media (max-width: 992px) {
   section {
     padding: 0px 25px;
@@ -447,6 +457,18 @@ a:visited {
     width: 100%;
   }
 
+  .search-form__search-bar__button {
+    border-radius: 12px;
+  }
+
+  .search-form__search-bar__button__text--pc {
+    display: none;
+  }
+
+  .search-form__search-bar__button__text--mob {
+    display: initial;
+  }
+
   .filters {
     flex-direction: column;
     align-items: inherit;
@@ -483,10 +505,6 @@ a:visited {
     min-width: initial;
   }
 
-  .accommodations__most-popular__results {
-    gap: 10px;
-  }
-
   .accommodations-smaller-card__amount {
     display: inline-flex;
     flex-direction: row-reverse;
@@ -498,20 +516,31 @@ a:visited {
   }
 
   .accommodations__marseille__result {
-    width: 100%;
+    width: 48%;
   }
 
   .accommodations__marseille__result__image-container {
     aspect-ratio: 3 / 1;
   }
 
+  .accommodations__most-popular__results {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .accommodations__most-popular__result {
+    width: 48%;
+  }
+
   .activities__container {
     gap: 20px;
     height: initial;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .activities-card {
-    width: 100%;
+    width: 48%;
   }
 
   .activities-card__image-container {
@@ -525,6 +554,38 @@ a:visited {
 
   .activities-card__text {
     padding: 15px;
+  }
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+  .filters__list-item {
+    margin: 0px;
+  }
+
+  .filters__list-item:nth-child(2) {
+    margin-right: 100%;
+    min-width: max-content;
+  }
+
+  .filters__list-item:nth-child(4) {
+    padding-right: 30px;
+  }
+
+  .accommodations__marseille__result {
+    width: 100%;
+  }
+
+  .accommodations__most-popular__results {
+    flex-direction: column;
+  }
+
+  .accommodations__most-popular__result {
+    width: 100%;
+  }
+
+  .activities-card {
+    width: 100%;
   }
 
   .footer {
