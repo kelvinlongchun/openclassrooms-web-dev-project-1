@@ -231,17 +231,13 @@ a:visited {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
-  min-height: 30px;
-  min-width: 30px;
+  height: 25px;
+  width: 25px;
+  min-height: 25px;
+  min-width: 25px;
   border: 2px solid #f2f2f2;
   border-radius: 100%;
   margin-right: 10px;
-}
-
-.accommodations__number-result_icon-container i {
-  font-size: initial;
 }
 
 .accommodations__number-result_icon {
@@ -568,7 +564,7 @@ a:visited {
     min-width: max-content;
   }
 
-  .filters__list-item:nth-child(4) {
+  .filters__list-item:nth-child(4) p{
     padding-right: 30px;
   }
 
